@@ -1,0 +1,2274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>J&amp;H Hogar — Cabeceras de autor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#121212;
+    --bg-alt:#1a1a1a;
+    --bg-alt-2:#1f1f1f;
+    --line:#333333;
+    --line-soft:#2a2a2a;
+    --plomo:#9a9a9a;
+    --plomo-light:#c9c9c6;
+    --white:#f5f4f1;
+    --wa:#3fae5c;
+    --wood:#a68a64;
+    --radius:2px;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--white);
+    font-family:'Inter',sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img,svg{max-width:100%;display:block;}
+
+  a{color:inherit;text-decoration:none;}
+  button{font-family:inherit;cursor:pointer;}
+
+  .wrap{
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+
+  h1,h2,h3{
+    font-family:'Fraunces',serif;
+    font-weight:500;
+    letter-spacing:-0.01em;
+  }
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:sticky;
+    top:0;
+    z-index:40;
+    background:rgba(18,18,18,0.86);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line-soft);
+  }
+  .header-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:20px 32px;
+    max-width:1180px;
+    margin:0 auto;
+  }
+  .logo{
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:1.5rem;
+    letter-spacing:0.01em;
+    display:flex;
+    align-items:center;
+    gap:12px;
+  }
+  .logo-img{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    flex-shrink:0;
+  }
+  .logo-img-footer{
+    width:58px;
+    height:58px;
+  }
+  .logo-footer{margin-bottom:14px;}
+  nav{display:flex;gap:36px;}
+  nav a{
+    font-size:0.92rem;
+    color:var(--plomo-light);
+    transition:color .2s ease;
+    position:relative;
+  }
+  nav a:hover, nav a:focus-visible{color:var(--white);}
+  nav a::after{
+    content:'';
+    position:absolute;
+    left:0;bottom:-6px;
+    width:0;height:1px;
+    background:var(--white);
+    transition:width .25s ease;
+  }
+  nav a:hover::after{width:100%;}
+
+  .header-actions{display:flex;align-items:center;gap:22px;}
+
+  .cart-btn{
+    position:relative;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    background:none;
+    border:1px solid var(--line);
+    color:var(--white);
+    padding:8px 14px;
+    border-radius:var(--radius);
+    font-size:0.85rem;
+    transition:border-color .2s ease;
+  }
+  .cart-btn:hover{border-color:var(--plomo-light);}
+  .cart-count{
+    background:var(--white);
+    color:var(--bg);
+    font-size:0.7rem;
+    font-weight:600;
+    min-width:18px;
+    height:18px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:0 4px;
+  }
+
+  .nav-toggle{display:none;background:none;border:none;color:var(--white);}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    padding:96px 0 90px;
+    border-bottom:1px solid var(--line-soft);
+  }
+  .hero-inner{
+    display:grid;
+    grid-template-columns:1.05fr 0.95fr;
+    gap:48px;
+    align-items:center;
+  }
+  .hero-copy h1{
+    font-size:clamp(2.4rem,4.4vw,3.6rem);
+    line-height:1.12;
+    max-width:12ch;
+  }
+  .hero-copy p{
+    margin-top:22px;
+    color:var(--plomo-light);
+    max-width:42ch;
+    font-size:1.05rem;
+  }
+  .cta{
+    display:inline-block;
+    margin-top:34px;
+    background:var(--white);
+    color:var(--bg);
+    padding:15px 30px;
+    border-radius:var(--radius);
+    font-size:0.95rem;
+    font-weight:600;
+    border:1px solid var(--white);
+    transition:background .2s ease, color .2s ease;
+  }
+  .cta:hover{background:transparent;color:var(--white);}
+  .cta.ghost{
+    background:transparent;
+    color:var(--white);
+    margin-left:14px;
+    border:1px solid var(--line);
+  }
+  .cta.ghost:hover{border-color:var(--white);}
+
+  .hero-art{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+  .hero-art svg{width:100%;height:auto;max-width:420px;}
+  .hero-art img{width:100%;height:auto;max-width:460px;border:1px solid #333333;border-radius:14px;object-fit:cover;aspect-ratio:4/5;}
+
+  /* ---------- SECTION TITLES ---------- */
+  .section{padding:88px 0;border-bottom:1px solid var(--line-soft);}
+  .section-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:24px;
+    margin-bottom:48px;
+    flex-wrap:wrap;
+  }
+  .section-head h2{font-size:clamp(1.8rem,3vw,2.3rem);}
+  .section-head p{color:var(--plomo);max-width:38ch;font-size:0.95rem;}
+
+  /* ---------- CATALOGO ---------- */
+  .grid{
+    display:flex;
+    flex-wrap:wrap;
+    gap:1px;
+    background:var(--line-soft);
+    border:1px solid var(--line-soft);
+  }
+  .grid .card{
+    flex:1 1 calc(33.3333% - 1px);
+    box-sizing:border-box;
+  }
+  .card{
+    background:var(--bg);
+    padding:30px 26px 26px;
+    display:flex;
+    flex-direction:column;
+  }
+  .card-art{
+    aspect-ratio:4/3;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:22px;
+    background:var(--bg-alt);
+    border:1px solid var(--line-soft);
+  }
+  .card-art svg{width:70%;height:70%;}
+  .card-art{overflow:hidden;padding:0;border-radius:10px;}
+
+  /* ---- Carrusel de fotos ---- */
+  .carousel-arrow{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    background:rgba(18,18,18,0.55);
+    backdrop-filter:blur(2px);
+    border:1px solid rgba(245,244,241,0.4);
+    color:var(--white);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:2;
+    opacity:0;
+    transition:opacity .25s ease, background .2s ease, transform .2s ease;
+  }
+  .card-art:hover .carousel-arrow{opacity:1;}
+  .carousel-arrow:hover{background:rgba(18,18,18,0.85);}
+  .carousel-arrow:active{transform:translateY(-50%) scale(0.9);}
+  .carousel-arrow.prev{left:8px;}
+  .carousel-arrow.next{right:8px;}
+  .carousel-arrow svg{width:14px;height:14px;}
+  @media (hover:none){
+    .carousel-arrow{opacity:1; background:rgba(18,18,18,0.45);}
+  }
+  .carousel-dots{
+    position:absolute;
+    bottom:10px;
+    left:0;
+    right:0;
+    display:flex;
+    justify-content:center;
+    gap:6px;
+    z-index:2;
+  }
+  .carousel-dot{
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:rgba(245,244,241,0.45);
+    border:none;
+    padding:0;
+    transition:background .25s ease, transform .25s ease;
+  }
+  .carousel-dot.active{background:var(--white); transform:scale(1.3);}
+  .card-art img{width:100%;height:100%;object-fit:cover;display:block;border-radius:10px;}
+  .card h3{font-size:1.2rem;font-weight:500;}
+  .card .meta{
+    color:var(--plomo);
+    font-size:0.85rem;
+    margin-top:6px;
+  }
+  .card .price{
+    font-family:'Fraunces',serif;
+    font-size:1.85rem;
+    font-weight:600;
+    letter-spacing:-0.01em;
+    margin-top:14px;
+    color:#ffffff;
+  }
+  .card .price .price-value{
+    text-shadow:0 0 22px rgba(245,244,241,0.45);
+  }
+  .card .price span{
+    color:var(--plomo-light);
+    font-size:0.8rem;
+    font-weight:400;
+    font-family:'Inter',sans-serif;
+    display:block;
+    margin-top:4px;
+  }
+  .card-actions{
+    margin-top:16px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+
+  /* ---- Selector de cantidad ---- */
+  .qty-stepper{
+    margin-top:18px;
+    display:inline-flex;
+    align-items:center;
+    gap:0;
+    border:1px solid var(--line);
+    border-radius:999px;
+    overflow:hidden;
+    width:fit-content;
+  }
+  .qty-btn{
+    width:34px;
+    height:34px;
+    background:transparent;
+    border:none;
+    color:var(--plomo-light);
+    font-size:1.1rem;
+    line-height:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:background .2s ease, color .2s ease;
+  }
+  .qty-btn:hover{background:var(--white);color:var(--bg);}
+  .qty-value{
+    min-width:34px;
+    text-align:center;
+    font-family:'Fraunces',serif;
+    font-size:0.95rem;
+    color:var(--white);
+    border-left:1px solid var(--line-soft);
+    border-right:1px solid var(--line-soft);
+    padding:0 4px;
+    height:34px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  /* ---- Badge de producto ---- */
+  .card{position:relative;}
+  .card-badge{
+    position:absolute;
+    top:18px;
+    left:18px;
+    z-index:2;
+    background:var(--bg);
+    border:1px solid var(--white);
+    color:var(--white);
+    font-size:0.68rem;
+    font-weight:600;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    padding:5px 10px;
+    border-radius:16px 3px 16px 3px;
+  }
+  .combo-badge{
+    background:var(--wa);
+    border-color:var(--wa);
+    color:#0e0e0e;
+    font-weight:700;
+  }
+  .strike{
+    text-decoration:line-through;
+    text-decoration-color:#c1665a;
+    color:#9a8f8c;
+    font-size:0.95rem;
+    font-weight:500;
+    font-family:'Inter',sans-serif;
+    margin-left:10px;
+  }
+  .combo-includes{
+    margin-top:6px;
+    color:var(--plomo-light);
+    font-size:0.78rem;
+    line-height:1.4;
+  }
+
+  /* ---- Pestañas de categoría ---- */
+  .cat-tabs{
+    display:flex;
+    gap:10px;
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+    margin-bottom:32px;
+    padding-bottom:2px;
+  }
+  .cat-tabs::-webkit-scrollbar{display:none;}
+  .cat-tab{
+    flex-shrink:0;
+    background:transparent;
+    border:1px solid var(--line);
+    color:var(--plomo-light);
+    padding:9px 18px;
+    border-radius:999px;
+    font-size:0.82rem;
+    letter-spacing:0.02em;
+    transition:all .2s ease;
+  }
+  .cat-tab:hover{border-color:var(--plomo-light);color:var(--white);}
+  .cat-tab.active{
+    border-color:transparent;
+    color:var(--bg);
+    font-weight:600;
+  }
+
+  /* ---- Swatches de color ---- */
+  .swatches{
+    display:flex;
+    gap:10px;
+    margin-top:18px;
+  }
+  .swatch{
+    width:22px;
+    height:22px;
+    border-radius:50%;
+    background:var(--swatch-color);
+    border:1px solid var(--line);
+    padding:0;
+    cursor:pointer;
+    position:relative;
+    transition:transform .2s ease, border-color .2s ease;
+  }
+  .swatch:hover{transform:scale(1.12);}
+  .swatch.active{border-color:var(--white);box-shadow:0 0 0 2px var(--bg), 0 0 0 3px var(--white);}
+  .color-label{
+    margin-top:8px;
+    font-size:0.78rem;
+    color:var(--plomo);
+  }
+
+  /* ---- Overlay de color: tiñe solo la zona de la cabecera, no el fondo ---- */
+  .color-overlay{
+    position:absolute;
+    z-index:1;
+    mix-blend-mode:color;
+    pointer-events:none;
+    border-radius:3px;
+    opacity:0;
+    transition:opacity .45s ease, background .45s ease, transform .6s cubic-bezier(.16,1,.3,1);
+  }
+  .card:hover .color-overlay{transform:scale(1.07);}
+
+  /* ---- Selector de medidas ---- */
+  .all-sizes-note{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    margin-top:6px;
+    color:var(--plomo-light);
+    font-size:0.76rem;
+  }
+  .all-sizes-note svg{width:13px;height:13px;flex-shrink:0;color:var(--plomo);}
+  .size-selector{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    margin-top:6px;
+  }
+  .size-btn{
+    background:transparent;
+    border:1px solid var(--line);
+    color:var(--plomo-light);
+    padding:5px 12px;
+    border-radius:999px;
+    font-size:0.76rem;
+    transition:all .2s ease;
+  }
+  .size-btn:hover{border-color:var(--plomo-light); color:var(--white);}
+  .size-btn.active{
+    background:var(--white);
+    border-color:var(--white);
+    color:var(--bg);
+    font-weight:600;
+  }
+
+  /* ---- Animación al hacer scroll ---- */
+  .reveal{
+    opacity:0;
+    transform:translateY(26px);
+    transition:opacity .7s ease, transform .7s ease;
+  }
+  .reveal.in-view{opacity:1;transform:none;}
+
+  /* ---- Barra de confianza ---- */
+  .trust-bar{
+    border-bottom:1px solid var(--line-soft);
+    background:var(--bg-alt);
+  }
+  .trust-inner{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:0;
+    padding:16px 32px;
+    max-width:1180px;
+    margin:0 auto;
+  }
+  .trust-item{
+    font-size:0.82rem;
+    color:var(--plomo-light);
+    padding:0 22px;
+    border-right:1px solid var(--line-soft);
+    white-space:nowrap;
+  }
+  .trust-item:last-child{border-right:none;}
+  .trust-item b{color:var(--white);font-weight:600;}
+
+  /* ---- Nuestro proceso ---- */
+  .process-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:36px;
+  }
+  .process-step .num{
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-size:2.4rem;
+    color:var(--line);
+    line-height:1;
+    margin-bottom:14px;
+  }
+  .process-step h3{font-size:1.02rem;font-weight:500;margin-bottom:8px;}
+  .process-step p{color:var(--plomo);font-size:0.9rem;}
+
+  /* ---- FAQ ---- */
+  .faq-list{max-width:760px;}
+  .faq-item{
+    border-bottom:1px solid var(--line-soft);
+  }
+  .faq-q{
+    width:100%;
+    background:none;
+    border:none;
+    color:var(--white);
+    text-align:left;
+    padding:22px 0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    font-family:'Fraunces',serif;
+    font-size:1.05rem;
+    cursor:pointer;
+  }
+  .faq-q .plus{
+    font-size:1.3rem;
+    color:var(--plomo);
+    transition:transform .3s ease;
+    flex-shrink:0;
+  }
+  .faq-item.open .faq-q .plus{transform:rotate(45deg);}
+  .faq-a{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .35s ease;
+  }
+  .faq-a p{color:var(--plomo-light);padding-bottom:22px;font-size:0.92rem;max-width:60ch;}
+  .faq-item.open .faq-a{max-height:200px;}
+
+  /* ---- Galería ---- */
+  .gallery-strip{
+    display:flex;
+    gap:14px;
+    overflow-x:auto;
+    padding-bottom:8px;
+    scroll-snap-type:x mandatory;
+  }
+  .gallery-strip img{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+    border:1px solid var(--line-soft);
+    flex-shrink:0;
+    scroll-snap-align:start;
+  }
+
+  @media (max-width:900px){
+    .process-grid{grid-template-columns:repeat(2,1fr);}
+  }
+  @media (max-width:600px){
+    .process-grid{grid-template-columns:1fr;}
+    .trust-item{padding:0 14px;font-size:0.76rem;}
+  }
+
+  /* ---- Botones ---- */
+  .btn{
+    position:relative;
+    display:block;
+    width:100%;
+    padding:13px 16px;
+    border-radius:16px 3px 16px 3px;
+    font-size:0.8rem;
+    font-weight:600;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    text-align:center;
+    border:1px solid var(--line);
+    background:transparent;
+    color:var(--white);
+    box-sizing:border-box;
+    overflow:hidden;
+    isolation:isolate;
+    transition:border-color .3s ease, color .3s ease, transform .25s ease, box-shadow .25s ease;
+  }
+  .btn > span{position:relative;z-index:1;}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,0.35);}
+  .btn.primary{
+    background:var(--white);
+    color:var(--bg);
+    border-color:var(--white);
+  }
+  .btn.primary:hover{background:transparent;color:var(--white);border-color:var(--white);}
+  .btn.wa{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:0;
+    border-color:var(--wa);
+    color:var(--wa);
+  }
+  .wa-btn-inner{
+    position:relative;
+    z-index:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+  }
+  .btn.wa::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:var(--wa);
+    transform:scaleX(0);
+    transform-origin:left;
+    transition:transform .4s cubic-bezier(.65,0,.35,1);
+    z-index:0;
+  }
+  .btn.wa:hover::before{transform:scaleX(1);}
+  .btn.wa:hover{color:var(--bg);border-color:var(--wa);}
+  .btn.wa svg{width:16px;height:16px;flex-shrink:0;}
+
+  /* ---------- BENEFICIOS ---------- */
+  .benefits{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+  }
+  .benefit-icon{
+    width:38px;height:38px;
+    margin-bottom:18px;
+    color:var(--plomo-light);
+  }
+  .benefit h3{font-size:1.05rem;font-weight:500;margin-bottom:8px;}
+  .benefit p{color:var(--plomo);font-size:0.92rem;max-width:34ch;}
+
+  /* ---------- NOSOTROS ---------- */
+  .nosotros{
+    display:grid;
+    grid-template-columns:0.9fr 1.1fr;
+    gap:56px;
+    align-items:center;
+  }
+  .nosotros-art svg{width:100%;max-width:340px;}
+  .nosotros-copy p{
+    font-size:1.15rem;
+    line-height:1.65;
+    color:var(--plomo-light);
+    font-family:'Fraunces',serif;
+    font-weight:400;
+  }
+  .nosotros-stats{
+    display:flex;
+    gap:40px;
+    margin-top:34px;
+  }
+  .stat b{
+    font-family:'Fraunces',serif;
+    font-size:1.6rem;
+    display:block;
+  }
+  .stat span{color:var(--plomo);font-size:0.82rem;}
+
+  /* ---------- TESTIMONIOS ---------- */
+  .testi-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1px;
+    background:var(--line-soft);
+    border:1px solid var(--line-soft);
+  }
+  .testi{
+    background:var(--bg);
+    padding:30px 26px;
+  }
+  .testi p{
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    color:var(--white);
+    font-size:1.02rem;
+    line-height:1.55;
+  }
+  .testi .who{
+    margin-top:18px;
+    color:var(--plomo);
+    font-size:0.82rem;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{padding:60px 0 40px;}
+  .footer-inner{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:30px;
+  }
+  .footer-inner .logo{margin-bottom:10px;}
+  footer p{color:var(--plomo);font-size:0.88rem;max-width:32ch;}
+  .footer-links{display:flex;gap:50px;flex-wrap:wrap;}
+  .footer-col h4{font-size:0.82rem;color:var(--plomo);font-weight:600;margin-bottom:12px;}
+  .footer-col a{display:block;font-size:0.9rem;color:var(--plomo-light);margin-bottom:8px;}
+  .footer-col a:hover{color:var(--white);}
+  .footer-bottom{
+    margin-top:50px;
+    padding-top:22px;
+    border-top:1px solid var(--line-soft);
+    color:var(--plomo);
+    font-size:0.78rem;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+  /* ---------- FLOATING WHATSAPP ---------- */
+  .wa-float{
+    position:fixed;
+    bottom:26px;
+    right:26px;
+    z-index:50;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:var(--wa);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 6px 24px rgba(0,0,0,0.4);
+    border:none;
+    transition:transform .2s ease;
+  }
+  .wa-float:hover{transform:scale(1.06);}
+  .wa-float svg{width:28px;height:28px;color:#0e0e0e;}
+
+  /* ---------- CART PANEL ---------- */
+  .overlay{
+    position:fixed;inset:0;
+    background:rgba(0,0,0,0.55);
+    opacity:0;pointer-events:none;
+    transition:opacity .25s ease;
+    z-index:60;
+  }
+  .overlay.open{opacity:1;pointer-events:auto;}
+
+  .cart-panel{
+    position:fixed;
+    top:0;right:0;
+    height:100%;
+    width:min(400px,92vw);
+    background:var(--bg-alt);
+    border-left:1px solid var(--line);
+    z-index:61;
+    transform:translateX(100%);
+    transition:transform .3s ease;
+    display:flex;
+    flex-direction:column;
+  }
+  .cart-panel.open{transform:translateX(0);}
+  .cart-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:24px 24px 18px;
+    border-bottom:1px solid var(--line-soft);
+  }
+  .cart-head h3{font-size:1.2rem;}
+  .cart-close{background:none;border:none;color:var(--white);font-size:1.4rem;line-height:1;}
+  .cart-items{
+    flex:1;
+    overflow-y:auto;
+    padding:18px 24px;
+  }
+  .cart-empty{color:var(--plomo);font-size:0.9rem;margin-top:20px;}
+  .cart-item{
+    display:flex;
+    justify-content:space-between;
+    gap:12px;
+    padding:14px 0;
+    border-bottom:1px solid var(--line-soft);
+  }
+  .cart-item .ci-name{font-size:0.95rem;}
+  .cart-item .ci-meta{color:var(--plomo);font-size:0.78rem;margin-top:3px;}
+  .cart-item .ci-price{font-family:'Fraunces',serif;font-size:0.95rem;white-space:nowrap;}
+  .ci-remove{
+    background:none;border:none;color:var(--plomo);
+    font-size:0.75rem;text-decoration:underline;margin-top:6px;
+  }
+  .ci-remove:hover{color:var(--white);}
+  .cart-foot{
+    border-top:1px solid var(--line-soft);
+    padding:20px 24px 26px;
+  }
+  .cart-total{
+    display:flex;
+    justify-content:space-between;
+    font-size:1.05rem;
+    margin-bottom:16px;
+  }
+  .cart-total b{font-family:'Fraunces',serif;}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:900px){
+    .hero-inner{grid-template-columns:1fr;}
+    .hero-art{order:-1;max-width:280px;margin:0 auto;}
+    .grid .card{flex-basis:calc(50% - 1px);}
+    .benefits{grid-template-columns:1fr;gap:32px;}
+    .nosotros{grid-template-columns:1fr;}
+    .nosotros-art{order:-1;max-width:220px;margin:0 auto;}
+    .testi-grid{grid-template-columns:1fr;}
+    nav{
+      position:fixed;
+      top:73px;left:0;right:0;
+      background:var(--bg);
+      border-bottom:1px solid var(--line-soft);
+      flex-direction:column;
+      gap:0;
+      max-height:0;
+      overflow:hidden;
+      transition:max-height .3s ease;
+    }
+    nav.open{max-height:260px;}
+    nav a{padding:16px 32px;border-bottom:1px solid var(--line-soft);}
+    .nav-toggle{display:block;}
+  }
+  @media (max-width:600px){
+    .wrap,.header-inner{padding-left:20px;padding-right:20px;}
+    .grid .card{flex-basis:100%;}
+    .section{padding:64px 0;}
+  }
+
+  /* ================= ANIMACIONES ================= */
+
+  html{background:var(--bg); opacity:0; animation:pageFadeIn .5s ease .05s forwards;}
+  @keyframes pageFadeIn{from{opacity:0;} to{opacity:1;}}
+
+  /* ---- Entrada del hero ---- */
+  @keyframes heroUp{
+    from{opacity:0; transform:translateY(22px);}
+    to{opacity:1; transform:none;}
+  }
+  .hero-copy h1{animation:heroUp .8s cubic-bezier(.16,1,.3,1) .1s both;}
+  .hero-copy p{animation:heroUp .8s cubic-bezier(.16,1,.3,1) .22s both;}
+  .hero-copy .cta{animation:heroUp .8s cubic-bezier(.16,1,.3,1) .34s both;}
+  .hero-art img{animation:heroUp 1s cubic-bezier(.16,1,.3,1) .2s both;}
+
+  /* ---- Header y logo ---- */
+  .logo-img{transition:transform .4s cubic-bezier(.34,1.56,.64,1);}
+  .logo:hover .logo-img{transform:rotate(6deg) scale(1.06);}
+  .cart-btn svg{transition:transform .3s ease;}
+  .cart-btn:hover svg{transform:translateX(2px);}
+
+  /* ---- Tarjetas: lift + zoom de imagen ---- */
+  .card{transition:transform .4s cubic-bezier(.16,1,.3,1), box-shadow .4s ease, opacity .7s ease;}
+  .card:hover{transform:translateY(-7px); box-shadow:0 20px 44px rgba(0,0,0,0.45);}
+  .card-art img{transition:transform .6s cubic-bezier(.16,1,.3,1), filter .5s ease;}
+  .card:hover .card-art img{transform:scale(1.07);}
+  .card-badge{transition:transform .3s ease;}
+  .card:hover .card-badge{transform:translateY(-2px);}
+
+  /* ---- Stagger en cuadrículas al revelarse ---- */
+  .benefits .benefit:nth-child(1){transition-delay:0s;}
+  .benefits .benefit:nth-child(2){transition-delay:.12s;}
+  .benefits .benefit:nth-child(3){transition-delay:.24s;}
+  .process-grid .process-step:nth-child(1){transition-delay:0s;}
+  .process-grid .process-step:nth-child(2){transition-delay:.1s;}
+  .process-grid .process-step:nth-child(3){transition-delay:.2s;}
+  .process-grid .process-step:nth-child(4){transition-delay:.3s;}
+  .testi-grid .testi:nth-child(1){transition-delay:0s;}
+  .testi-grid .testi:nth-child(2){transition-delay:.12s;}
+  .testi-grid .testi:nth-child(3){transition-delay:.24s;}
+  .faq-item:nth-child(1){transition-delay:0s;}
+  .faq-item:nth-child(2){transition-delay:.06s;}
+  .faq-item:nth-child(3){transition-delay:.12s;}
+  .faq-item:nth-child(4){transition-delay:.18s;}
+  .faq-item:nth-child(5){transition-delay:.24s;}
+
+  /* ---- Subrayado animado en títulos de sección ---- */
+  .section-head h2{position:relative; display:inline-block;}
+  .section-head h2::after{
+    content:'';
+    position:absolute;
+    left:0; bottom:-8px;
+    height:1px;
+    width:0;
+    background:var(--white);
+    transition:width .8s cubic-bezier(.16,1,.3,1) .15s;
+  }
+  .section-head.in-view h2::after{width:56px;}
+
+  /* ---- Beneficios e íconos ---- */
+  .benefit-icon{transition:transform .35s ease;}
+  .benefit:hover .benefit-icon{transform:translateY(-3px) scale(1.08);}
+
+  /* ---- Testimonios ---- */
+  .testi{transition:transform .35s ease, background .35s ease;}
+  .testi:hover{transform:translateY(-4px); background:var(--bg-alt-2);}
+
+  /* ---- Galería ---- */
+  .gallery-strip img{transition:transform .5s cubic-bezier(.16,1,.3,1), filter .5s ease;}
+  .gallery-strip img:hover{transform:scale(1.045); filter:brightness(1.08);}
+
+  /* ---- Swatches y qty ---- */
+  .swatch{transition:transform .25s cubic-bezier(.34,1.56,.64,1), border-color .2s ease;}
+  .qty-btn{transition:background .2s ease, color .2s ease, transform .15s ease;}
+  .qty-btn:active{transform:scale(0.88);}
+
+  /* ---- Pestañas de categoría ---- */
+  .cat-tab{transition:all .3s cubic-bezier(.16,1,.3,1);}
+  .cat-tab:active{transform:scale(0.96);}
+
+  /* ---- FAQ ---- */
+  .faq-a{opacity:0; transition:max-height .4s cubic-bezier(.16,1,.3,1), opacity .35s ease;}
+  .faq-item.open .faq-a{opacity:1;}
+  .faq-q{transition:color .2s ease;}
+  .faq-item:hover .faq-q{color:var(--plomo-light);}
+
+  /* ---- Botón flotante de WhatsApp: pulso ---- */
+  .wa-float{position:fixed;}
+  .wa-float::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    border-radius:50%;
+    background:var(--wa);
+    animation:waPulse 2.6s ease-out infinite;
+    z-index:-1;
+  }
+  @keyframes waPulse{
+    0%{opacity:.55; transform:scale(1);}
+    70%{opacity:0; transform:scale(1.9);}
+    100%{opacity:0; transform:scale(1.9);}
+  }
+
+  /* ---- Contador del carrito ---- */
+  .cart-count{transition:transform .2s ease;}
+  .cart-count.bump{animation:cartBump .35s cubic-bezier(.34,1.56,.64,1);}
+  @keyframes cartBump{
+    0%{transform:scale(1);}
+    45%{transform:scale(1.4);}
+    100%{transform:scale(1);}
+  }
+
+  /* ---- Panel de carrito ---- */
+  .cart-item{transition:opacity .3s ease;}
+
+  /* ---- Pestañas de categoría: indicador deslizante ---- */
+  .cat-tabs{position:relative;}
+  .cat-tab{position:relative; z-index:1;}
+  .cat-tab.active{transition:color .25s ease;}
+  .cat-tab-indicator{
+    position:absolute;
+    top:0; left:0;
+    height:36px;
+    background:var(--white);
+    border-radius:999px;
+    z-index:0;
+    transition:transform .4s cubic-bezier(.65,0,.35,1), width .4s cubic-bezier(.65,0,.35,1);
+    pointer-events:none;
+  }
+
+  /* ---- Transición de filtrado del catálogo ---- */
+  .card.filtering-out{
+    opacity:0 !important;
+    transform:scale(0.92) translateY(10px) !important;
+    transition:opacity .28s ease, transform .28s ease !important;
+  }
+  .card.filtering-in{
+    animation:cardFilterIn .45s cubic-bezier(.16,1,.3,1) both;
+  }
+  @keyframes cardFilterIn{
+    from{opacity:0; transform:scale(0.92) translateY(14px);}
+    to{opacity:1; transform:none;}
+  }
+
+  /* ---- Stagger de las tarjetas del catálogo al revelarse ---- */
+  #productGrid .card:nth-child(1){transition-delay:0s;}
+  #productGrid .card:nth-child(2){transition-delay:.08s;}
+  #productGrid .card:nth-child(3){transition-delay:.16s;}
+  #productGrid .card:nth-child(4){transition-delay:.24s;}
+  #productGrid .card:nth-child(5){transition-delay:.32s;}
+  #productGrid .card:nth-child(6){transition-delay:.4s;}
+  #productGrid .card:nth-child(n+7){transition-delay:.46s;}
+
+  /* ---- Precio animado ---- */
+  .price .price-value{display:inline-block;}
+
+  /* ---- Badge con brillo sutil ---- */
+  .card-badge{overflow:hidden;}
+  .card-badge::after{
+    content:'';
+    position:absolute;
+    top:0; left:-60%;
+    width:40%;
+    height:100%;
+    background:linear-gradient(115deg, transparent, rgba(255,255,255,0.35), transparent);
+    animation:badgeShine 3.2s ease-in-out infinite;
+  }
+  @keyframes badgeShine{
+    0%{left:-60%;}
+    45%{left:130%;}
+    100%{left:130%;}
+  }
+
+  /* ---- Feedback táctil (móvil y desktop) ---- */
+  .btn:active{transform:translateY(0) scale(0.97);}
+  .swatch:active{transform:scale(0.9);}
+  .cat-tab:active{transform:scale(0.95);}
+  .card-art{position:relative; overflow:hidden;}
+  @media (hover:none){
+    .card:active{transform:translateY(-3px); box-shadow:0 12px 28px rgba(0,0,0,0.4);}
+    .card:active .card-art img{transform:scale(1.04);}
+    .gallery-strip img:active{transform:scale(1.03);}
+  }
+
+  /* ---- Ítems del carrito al agregarse ---- */
+  .cart-item{animation:cartItemIn .35s cubic-bezier(.16,1,.3,1) both;}
+  @keyframes cartItemIn{
+    from{opacity:0; transform:translateX(14px);}
+    to{opacity:1; transform:none;}
+  }
+
+  /* ---- Números animados (Nosotros) ---- */
+  .stat b{transition:opacity .3s ease;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{transition:none !important; scroll-behavior:auto !important; animation:none !important;}
+  }
+
+  :focus-visible{outline:1px solid var(--white);outline-offset:2px;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="#inicio" class="logo"><img src="images/logo.png" alt="J&amp;H Hogar" class="logo-img">J&amp;H Hogar</a>
+    <nav id="mainNav">
+      <a href="#inicio">Inicio</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="header-actions">
+      <button class="cart-btn" onclick="openCart()" aria-label="Abrir carrito">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
+        Carrito
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="nav-toggle" onclick="toggleNav()" aria-label="Abrir menú">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="trust-bar">
+  <div class="trust-inner">
+    <span class="trust-item"><b>Envío</b> a todo el Perú</span>
+    <span class="trust-item"><b>Garantía</b> de 2 años</span>
+    <span class="trust-item"><b>3 días</b> máximo de entrega</span>
+    <span class="trust-item"><b>+500</b> cabeceras entregadas</span>
+  </div>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="inicio">
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <h1>Donde termina tu día, empieza el diseño.</h1>
+      <p>Cabeceras hechas a mano, a tu medida, para el espacio que más usas y menos decoras.</p>
+      <a href="#catalogo" class="cta">Ver catálogo</a>
+      <a href="#nosotros" class="cta ghost">Sobre el taller</a>
+    </div>
+    <div class="hero-art">
+      <img src="images/hexa.jpg" alt="Cabecera Hexa J&amp;H Hogar en dormitorio de lujo">
+    </div>
+  </div>
+</section>
+
+<!-- ============ CATALOGO ============ -->
+<section class="section" id="catalogo">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>Catálogo</h2>
+      <p>Cabeceras, box tarima y combos completos con colchón incluido. Si tu medida es distinta, la ajustamos al pedido.</p>
+    </div>
+    <div class="cat-tabs" id="catTabs">
+      <div class="cat-tab-indicator" id="catIndicator"></div>
+      <button type="button" class="cat-tab active" data-cat="todo" onclick="filterCategory('todo', this)">Todo</button>
+      <button type="button" class="cat-tab" data-cat="cabecera" onclick="filterCategory('cabecera', this)">Cabeceras</button>
+      <button type="button" class="cat-tab" data-cat="base" onclick="filterCategory('base', this)">Box Tarima</button>
+      <button type="button" class="cat-tab" data-cat="combo" onclick="filterCategory('combo', this)">Combos</button>
+    </div>
+    <div class="grid" id="productGrid">
+      <div class="card reveal" data-category="cabecera">
+        <span class="card-badge">Más vendido</span>
+        <div class="card-art"><img id="img-hexa" src="images/hexa.jpg" alt="Hexa, 2 Plazas">
+        <div class="color-overlay" id="overlay-hexa" style="top:36%;left:30%;width:39%;height:27%;background:transparent;opacity:0;"></div>
+        
+        </div>
+        <h3>Hexa</h3>
+        <div class="meta" id="sizelabel-hexa">2 Plazas</div>
+        <div class="all-sizes-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="18" height="12" rx="1.5"/><path d="M3 11h18"/></svg>Disponible en todas las medidas</div>
+        <div class="price"><span class="price-value counter" id="priceval-hexa" data-count="279" data-format="money">S/ 279</span> <span class="strike">S/ 349</span><span>Precio final, sin cuotas</span></div>
+        
+        <div class="swatches" role="group" aria-label="Color de tela"><button type="button" class="swatch active" style="--swatch-color:#8a8a8a" onclick="selectColor('hexa',0)" aria-label="Negro y Crema" title="Negro y Crema"></button><button type="button" class="swatch" style="--swatch-color:#c9a875" onclick="selectColor('hexa',1)" aria-label="Beige Cálido" title="Beige Cálido"></button><button type="button" class="swatch" style="--swatch-color:#6b6f73" onclick="selectColor('hexa',2)" aria-label="Gris Grafito" title="Gris Grafito"></button></div>
+        <div class="color-label" id="color-hexa">Negro y Crema</div>
+        <div class="qty-stepper" role="group" aria-label="Cantidad">
+          <button type="button" class="qty-btn" onclick="changeQty('hexa',-1)" aria-label="Restar">−</button>
+          <span class="qty-value" id="qty-hexa">1</span>
+          <button type="button" class="qty-btn" onclick="changeQty('hexa',1)" aria-label="Sumar">+</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn primary" onclick="addToCart('hexa')"><span>Añadir al carrito</span></button>
+          <a class="btn wa" href="https://wa.me/51910591720?text=%C2%A1Hola%21%20Estoy%20interesado/a%20en%20la%20cabecera%20Hexa%20%28Negro%20y%20Crema%29%20en%20tama%C3%B1o%202%20Plazas%20por%20el%20precio%20de%20S/%20279%20c/u.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" rel="noopener" id="wa-link-hexa">
+            <span class="wa-btn-inner">
+            <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.01 3C9.38 3 4 8.38 4 15.01c0 2.4.63 4.65 1.72 6.6L4 29l7.6-1.65a11.9 11.9 0 0 0 4.41.84h.01c6.63 0 12.01-5.38 12.01-12.01C28.02 8.38 22.64 3 16.01 3z"/></svg>
+            Consultar por WhatsApp
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="card reveal" data-category="cabecera">
+        
+        <div class="card-art"><img id="img-aurora" src="images/aurora.jpg" alt="Aurora, 2 Plazas">
+        <div class="color-overlay" id="overlay-aurora" style="top:22%;left:30%;width:41%;height:45%;background:transparent;opacity:0;"></div>
+        
+        </div>
+        <h3>Aurora</h3>
+        <div class="meta" id="sizelabel-aurora">2 Plazas</div>
+        <div class="all-sizes-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="18" height="12" rx="1.5"/><path d="M3 11h18"/></svg>Disponible en todas las medidas</div>
+        <div class="price"><span class="price-value counter" id="priceval-aurora" data-count="279" data-format="money">S/ 279</span> <span class="strike">S/ 349</span><span>Precio final, sin cuotas</span></div>
+        
+        <div class="swatches" role="group" aria-label="Color de tela"><button type="button" class="swatch active" style="--swatch-color:#8a8a8a" onclick="selectColor('aurora',0)" aria-label="Azul Grafito" title="Azul Grafito"></button><button type="button" class="swatch" style="--swatch-color:#7c8a6a" onclick="selectColor('aurora',1)" aria-label="Verde Salvia" title="Verde Salvia"></button><button type="button" class="swatch" style="--swatch-color:#b8bcc0" onclick="selectColor('aurora',2)" aria-label="Plata" title="Plata"></button></div>
+        <div class="color-label" id="color-aurora">Azul Grafito</div>
+        <div class="qty-stepper" role="group" aria-label="Cantidad">
+          <button type="button" class="qty-btn" onclick="changeQty('aurora',-1)" aria-label="Restar">−</button>
+          <span class="qty-value" id="qty-aurora">1</span>
+          <button type="button" class="qty-btn" onclick="changeQty('aurora',1)" aria-label="Sumar">+</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn primary" onclick="addToCart('aurora')"><span>Añadir al carrito</span></button>
+          <a class="btn wa" href="https://wa.me/51910591720?text=%C2%A1Hola%21%20Estoy%20interesado/a%20en%20la%20cabecera%20Aurora%20%28Azul%20Grafito%29%20en%20tama%C3%B1o%202%20Plazas%20por%20el%20precio%20de%20S/%20279%20c/u.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" rel="noopener" id="wa-link-aurora">
+            <span class="wa-btn-inner">
+            <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.01 3C9.38 3 4 8.38 4 15.01c0 2.4.63 4.65 1.72 6.6L4 29l7.6-1.65a11.9 11.9 0 0 0 4.41.84h.01c6.63 0 12.01-5.38 12.01-12.01C28.02 8.38 22.64 3 16.01 3z"/></svg>
+            Consultar por WhatsApp
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="card reveal" data-category="cabecera">
+        <span class="card-badge">Nuevo</span>
+        <div class="card-art"><img id="img-colmena" src="images/colmena.jpg" alt="Colmena, 2 Plazas">
+        <div class="color-overlay" id="overlay-colmena" style="top:38%;left:34%;width:32%;height:50%;background:transparent;opacity:0;"></div>
+        
+        </div>
+        <h3>Colmena</h3>
+        <div class="meta" id="sizelabel-colmena">2 Plazas</div>
+        <div class="all-sizes-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="18" height="12" rx="1.5"/><path d="M3 11h18"/></svg>Disponible en todas las medidas</div>
+        <div class="price"><span class="price-value counter" id="priceval-colmena" data-count="279" data-format="money">S/ 279</span> <span class="strike">S/ 349</span><span>Precio final, sin cuotas</span></div>
+        
+        <div class="swatches" role="group" aria-label="Color de tela"><button type="button" class="swatch active" style="--swatch-color:#8a8a8a" onclick="selectColor('colmena',0)" aria-label="Vino" title="Vino"></button><button type="button" class="swatch" style="--swatch-color:#1c1c1c" onclick="selectColor('colmena',1)" aria-label="Negro" title="Negro"></button><button type="button" class="swatch" style="--swatch-color:#b5613f" onclick="selectColor('colmena',2)" aria-label="Terracota" title="Terracota"></button></div>
+        <div class="color-label" id="color-colmena">Vino</div>
+        <div class="qty-stepper" role="group" aria-label="Cantidad">
+          <button type="button" class="qty-btn" onclick="changeQty('colmena',-1)" aria-label="Restar">−</button>
+          <span class="qty-value" id="qty-colmena">1</span>
+          <button type="button" class="qty-btn" onclick="changeQty('colmena',1)" aria-label="Sumar">+</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn primary" onclick="addToCart('colmena')"><span>Añadir al carrito</span></button>
+          <a class="btn wa" href="https://wa.me/51910591720?text=%C2%A1Hola%21%20Estoy%20interesado/a%20en%20la%20cabecera%20Colmena%20%28Vino%29%20en%20tama%C3%B1o%202%20Plazas%20por%20el%20precio%20de%20S/%20279%20c/u.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" rel="noopener" id="wa-link-colmena">
+            <span class="wa-btn-inner">
+            <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.01 3C9.38 3 4 8.38 4 15.01c0 2.4.63 4.65 1.72 6.6L4 29l7.6-1.65a11.9 11.9 0 0 0 4.41.84h.01c6.63 0 12.01-5.38 12.01-12.01C28.02 8.38 22.64 3 16.01 3z"/></svg>
+            Consultar por WhatsApp
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="card reveal" data-category="cabecera">
+        
+        <div class="card-art"><img id="img-vertice-imperial" src="images/vertice-imperial.jpg" alt="Vértice Imperial, 2 Plazas">
+        <div class="color-overlay" id="overlay-vertice-imperial" style="top:7%;left:28%;width:44%;height:47%;background:transparent;opacity:0;"></div>
+        
+        </div>
+        <h3>Vértice Imperial</h3>
+        <div class="meta" id="sizelabel-vertice-imperial">2 Plazas</div>
+        <div class="all-sizes-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="18" height="12" rx="1.5"/><path d="M3 11h18"/></svg>Disponible en todas las medidas</div>
+        <div class="price"><span class="price-value counter" id="priceval-vertice-imperial" data-count="279" data-format="money">S/ 279</span> <span class="strike">S/ 349</span><span>Precio final, sin cuotas</span></div>
+        
+        <div class="swatches" role="group" aria-label="Color de tela"><button type="button" class="swatch active" style="--swatch-color:#8a8a8a" onclick="selectColor('vertice-imperial',0)" aria-label="Chocolate" title="Chocolate"></button><button type="button" class="swatch" style="--swatch-color:#b98a52" onclick="selectColor('vertice-imperial',1)" aria-label="Camel" title="Camel"></button><button type="button" class="swatch" style="--swatch-color:#1c1c1c" onclick="selectColor('vertice-imperial',2)" aria-label="Negro" title="Negro"></button></div>
+        <div class="color-label" id="color-vertice-imperial">Chocolate</div>
+        <div class="qty-stepper" role="group" aria-label="Cantidad">
+          <button type="button" class="qty-btn" onclick="changeQty('vertice-imperial',-1)" aria-label="Restar">−</button>
+          <span class="qty-value" id="qty-vertice-imperial">1</span>
+          <button type="button" class="qty-btn" onclick="changeQty('vertice-imperial',1)" aria-label="Sumar">+</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn primary" onclick="addToCart('vertice-imperial')"><span>Añadir al carrito</span></button>
+          <a class="btn wa" href="https://wa.me/51910591720?text=%C2%A1Hola%21%20Estoy%20interesado/a%20en%20la%20cabecera%20V%C3%A9rtice%20Imperial%20%28Chocolate%29%20en%20tama%C3%B1o%202%20Plazas%20por%20el%20precio%20de%20S/%20279%20c/u.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" rel="noopener" id="wa-link-vertice-imperial">
+            <span class="wa-btn-inner">
+            <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.01 3C9.38 3 4 8.38 4 15.01c0 2.4.63 4.65 1.72 6.6L4 29l7.6-1.65a11.9 11.9 0 0 0 4.41.84h.01c6.63 0 12.01-5.38 12.01-12.01C28.02 8.38 22.64 3 16.01 3z"/></svg>
+            Consultar por WhatsApp
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="card reveal" data-category="base">
+        
+        <div class="card-art"><img id="img-box-nube" src="images/box-nube.jpg" alt="Box Tarima Nube, 2 Plazas">
+        
+        
+        </div>
+        <h3>Box Tarima Nube</h3>
+        <div class="meta" id="sizelabel-box-nube">2 Plazas</div>
+        <div class="all-sizes-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="18" height="12" rx="1.5"/><path d="M3 11h18"/></svg>Disponible en todas las medidas</div>
+        <div class="price"><span class="price-value counter" id="priceval-box-nube" data-count="590" data-format="money">S/ 590</span><span>Precio final, sin cuotas</span></div>
+        
+        
+        <div class="qty-stepper" role="group" aria-label="Cantidad">
+          <button type="button" class="qty-btn" onclick="changeQty('box-nube',-1)" aria-label="Restar">−</button>
+          <span class="qty-value" id="qty-box-nube">1</span>
+          <button type="button" class="qty-btn" onclick="changeQty('box-nube',1)" aria-label="Sumar">+</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn primary" onclick="addToCart('box-nube')"><span>Añadir al carrito</span></button>
+          <a class="btn wa" href="https://wa.me/51910591720?text=%C2%A1Hola%21%20Estoy%20interesado/a%20en%20Box%20Tarima%20Nube%20en%20tama%C3%B1o%202%20Plazas%20por%20el%20precio%20de%20S/%20590.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" rel="noopener" id="wa-link-box-nube">
+            <span class="wa-btn-inner">
+            <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.01 3C9.38 3 4 8.38 4 15.01c0 2.4.63 4.65 1.72 6.6L4 29l7.6-1.65a11.9 11.9 0 0 0 4.41.84h.01c6.63 0 12.01-5.38 12.01-12.01C28.02 8.38 22.64 3 16.01 3z"/></svg>
+            Consultar por WhatsApp
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="card reveal" data-category="base">
+        
+        <div class="card-art"><img id="img-box-cajones" src="images/box-cajones.jpg" alt="Box Tarima con Cajones, 2 Plazas">
+        
+        
+        </div>
+        <h3>Box Tarima con Cajones</h3>
+        <div class="meta" id="sizelabel-box-cajones">2 Plazas</div>
+        <div class="all-sizes-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="18" height="12" rx="1.5"/><path d="M3 11h18"/></svg>Disponible en todas las medidas</div>
+        <div class="price"><span class="price-value counter" id="priceval-box-cajones" data-count="690" data-format="money">S/ 690</span><span>Precio final, sin cuotas</span></div>
+        
+        
+        <div class="qty-stepper" role="group" aria-label="Cantidad">
+          <button type="button" class="qty-btn" onclick="changeQty('box-cajones',-1)" aria-label="Restar">−</button>
+          <span class="qty-value" id="qty-box-cajones">1</span>
+          <button type="button" class="qty-btn" onclick="changeQty('box-cajones',1)" aria-label="Sumar">+</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn primary" onclick="addToCart('box-cajones')"><span>Añadir al carrito</span></button>
+          <a class="btn wa" href="https://wa.me/51910591720?text=%C2%A1Hola%21%20Estoy%20interesado/a%20en%20Box%20Tarima%20con%20Cajones%20en%20tama%C3%B1o%202%20Plazas%20por%20el%20precio%20de%20S/%20690.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" rel="noopener" id="wa-link-box-cajones">
+            <span class="wa-btn-inner">
+            <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.01 3C9.38 3 4 8.38 4 15.01c0 2.4.63 4.65 1.72 6.6L4 29l7.6-1.65a11.9 11.9 0 0 0 4.41.84h.01c6.63 0 12.01-5.38 12.01-12.01C28.02 8.38 22.64 3 16.01 3z"/></svg>
+            Consultar por WhatsApp
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="card reveal" data-category="base">
+        
+        <div class="card-art"><img id="img-box-elevable" src="images/box-elevable.jpg" alt="Box Tarima Elevable, 2 Plazas">
+        
+        
+        </div>
+        <h3>Box Tarima Elevable</h3>
+        <div class="meta" id="sizelabel-box-elevable">2 Plazas</div>
+        <div class="all-sizes-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="18" height="12" rx="1.5"/><path d="M3 11h18"/></svg>Disponible en todas las medidas</div>
+        <div class="price"><span class="price-value counter" id="priceval-box-elevable" data-count="750" data-format="money">S/ 750</span><span>Precio final, sin cuotas</span></div>
+        
+        
+        <div class="qty-stepper" role="group" aria-label="Cantidad">
+          <button type="button" class="qty-btn" onclick="changeQty('box-elevable',-1)" aria-label="Restar">−</button>
+          <span class="qty-value" id="qty-box-elevable">1</span>
+          <button type="button" class="qty-btn" onclick="changeQty('box-elevable',1)" aria-label="Sumar">+</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn primary" onclick="addToCart('box-elevable')"><span>Añadir al carrito</span></button>
+          <a class="btn wa" href="https://wa.me/51910591720?text=%C2%A1Hola%21%20Estoy%20interesado/a%20en%20Box%20Tarima%20Elevable%20en%20tama%C3%B1o%202%20Plazas%20por%20el%20precio%20de%20S/%20750.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" rel="noopener" id="wa-link-box-elevable">
+            <span class="wa-btn-inner">
+            <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.01 3C9.38 3 4 8.38 4 15.01c0 2.4.63 4.65 1.72 6.6L4 29l7.6-1.65a11.9 11.9 0 0 0 4.41.84h.01c6.63 0 12.01-5.38 12.01-12.01C28.02 8.38 22.64 3 16.01 3z"/></svg>
+            Consultar por WhatsApp
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="card reveal" data-category="base">
+        
+        <div class="card-art"><img id="img-box-estampado" src="images/box-estampado.jpg" alt="Box Tarima Estampado, 2 Plazas">
+        
+        
+        </div>
+        <h3>Box Tarima Estampado</h3>
+        <div class="meta" id="sizelabel-box-estampado">2 Plazas</div>
+        <div class="all-sizes-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="18" height="12" rx="1.5"/><path d="M3 11h18"/></svg>Disponible en todas las medidas</div>
+        <div class="price"><span class="price-value counter" id="priceval-box-estampado" data-count="450" data-format="money">S/ 450</span><span>Precio final, sin cuotas</span></div>
+        
+        
+        <div class="qty-stepper" role="group" aria-label="Cantidad">
+          <button type="button" class="qty-btn" onclick="changeQty('box-estampado',-1)" aria-label="Restar">−</button>
+          <span class="qty-value" id="qty-box-estampado">1</span>
+          <button type="button" class="qty-btn" onclick="changeQty('box-estampado',1)" aria-label="Sumar">+</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn primary" onclick="addToCart('box-estampado')"><span>Añadir al carrito</span></button>
+          <a class="btn wa" href="https://wa.me/51910591720?text=%C2%A1Hola%21%20Estoy%20interesado/a%20en%20Box%20Tarima%20Estampado%20en%20tama%C3%B1o%202%20Plazas%20por%20el%20precio%20de%20S/%20450.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" rel="noopener" id="wa-link-box-estampado">
+            <span class="wa-btn-inner">
+            <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.01 3C9.38 3 4 8.38 4 15.01c0 2.4.63 4.65 1.72 6.6L4 29l7.6-1.65a11.9 11.9 0 0 0 4.41.84h.01c6.63 0 12.01-5.38 12.01-12.01C28.02 8.38 22.64 3 16.01 3z"/></svg>
+            Consultar por WhatsApp
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="card reveal" data-category="combo">
+        <span class="card-badge combo-badge">Ahorra S/ 260</span>
+        <div class="card-art"><img id="img-combo-hexa" src="images/hexa.jpg" alt="Combo Hexa Completo, 2 Plazas">
+        
+        <button type="button" class="carousel-arrow prev" onclick="carouselStep('combo-hexa',-1)" aria-label="Foto anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button>
+        <button type="button" class="carousel-arrow next" onclick="carouselStep('combo-hexa',1)" aria-label="Foto siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></button>
+        <div class="carousel-dots" id="dots-combo-hexa"><button type="button" class="carousel-dot active" onclick="setComboSlide('combo-hexa',0)" aria-label="Foto 1"></button><button type="button" class="carousel-dot" onclick="setComboSlide('combo-hexa',1)" aria-label="Foto 2"></button></div></div>
+        <h3>Combo Hexa Completo</h3>
+        <div class="meta" id="sizelabel-combo-hexa">2 Plazas</div>
+        <div class="all-sizes-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="18" height="12" rx="1.5"/><path d="M3 11h18"/></svg>Disponible en todas las medidas</div>
+        <div class="price"><span class="price-value counter" id="priceval-combo-hexa" data-count="939" data-format="money">S/ 939</span> <span class="strike">S/ 1,199</span><span>Incluye instalación</span></div>
+        <div class="combo-includes">Cabecera Hexa + Box Tarima Elevable + Colchón Confort</div>
+        
+        <div class="qty-stepper" role="group" aria-label="Cantidad">
+          <button type="button" class="qty-btn" onclick="changeQty('combo-hexa',-1)" aria-label="Restar">−</button>
+          <span class="qty-value" id="qty-combo-hexa">1</span>
+          <button type="button" class="qty-btn" onclick="changeQty('combo-hexa',1)" aria-label="Sumar">+</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn primary" onclick="addToCart('combo-hexa')"><span>Añadir al carrito</span></button>
+          <a class="btn wa" href="https://wa.me/51910591720?text=%C2%A1Hola%21%20Estoy%20interesado/a%20en%20el%20Combo%20Hexa%20Completo%20%28Cabecera%20Hexa%20%2B%20Box%20Tarima%20Elevable%20%2B%20Colch%C3%B3n%20Confort%29%20en%20tama%C3%B1o%202%20Plazas%20por%20S/%20939.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" rel="noopener" id="wa-link-combo-hexa">
+            <span class="wa-btn-inner">
+            <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.01 3C9.38 3 4 8.38 4 15.01c0 2.4.63 4.65 1.72 6.6L4 29l7.6-1.65a11.9 11.9 0 0 0 4.41.84h.01c6.63 0 12.01-5.38 12.01-12.01C28.02 8.38 22.64 3 16.01 3z"/></svg>
+            Consultar por WhatsApp
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="card reveal" data-category="combo">
+        <span class="card-badge combo-badge">Ahorra S/ 260</span>
+        <div class="card-art"><img id="img-combo-aurora" src="images/aurora.jpg" alt="Combo Aurora Esencial, 2 Plazas">
+        
+        <button type="button" class="carousel-arrow prev" onclick="carouselStep('combo-aurora',-1)" aria-label="Foto anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button>
+        <button type="button" class="carousel-arrow next" onclick="carouselStep('combo-aurora',1)" aria-label="Foto siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></button>
+        <div class="carousel-dots" id="dots-combo-aurora"><button type="button" class="carousel-dot active" onclick="setComboSlide('combo-aurora',0)" aria-label="Foto 1"></button><button type="button" class="carousel-dot" onclick="setComboSlide('combo-aurora',1)" aria-label="Foto 2"></button></div></div>
+        <h3>Combo Aurora Esencial</h3>
+        <div class="meta" id="sizelabel-combo-aurora">2 Plazas</div>
+        <div class="all-sizes-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="18" height="12" rx="1.5"/><path d="M3 11h18"/></svg>Disponible en todas las medidas</div>
+        <div class="price"><span class="price-value counter" id="priceval-combo-aurora" data-count="939" data-format="money">S/ 939</span> <span class="strike">S/ 1,199</span><span>Incluye instalación</span></div>
+        <div class="combo-includes">Cabecera Aurora + Box Tarima Clásico + Colchón Esencial</div>
+        
+        <div class="qty-stepper" role="group" aria-label="Cantidad">
+          <button type="button" class="qty-btn" onclick="changeQty('combo-aurora',-1)" aria-label="Restar">−</button>
+          <span class="qty-value" id="qty-combo-aurora">1</span>
+          <button type="button" class="qty-btn" onclick="changeQty('combo-aurora',1)" aria-label="Sumar">+</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn primary" onclick="addToCart('combo-aurora')"><span>Añadir al carrito</span></button>
+          <a class="btn wa" href="https://wa.me/51910591720?text=%C2%A1Hola%21%20Estoy%20interesado/a%20en%20el%20Combo%20Aurora%20Esencial%20%28Cabecera%20Aurora%20%2B%20Box%20Tarima%20Cl%C3%A1sico%20%2B%20Colch%C3%B3n%20Esencial%29%20en%20tama%C3%B1o%202%20Plazas%20por%20S/%20939.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" rel="noopener" id="wa-link-combo-aurora">
+            <span class="wa-btn-inner">
+            <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.01 3C9.38 3 4 8.38 4 15.01c0 2.4.63 4.65 1.72 6.6L4 29l7.6-1.65a11.9 11.9 0 0 0 4.41.84h.01c6.63 0 12.01-5.38 12.01-12.01C28.02 8.38 22.64 3 16.01 3z"/></svg>
+            Consultar por WhatsApp
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="card reveal" data-category="combo">
+        <span class="card-badge combo-badge">Ahorra S/ 260</span>
+        <div class="card-art"><img id="img-combo-colmena" src="images/colmena.jpg" alt="Combo Colmena Premium, 2 Plazas">
+        
+        <button type="button" class="carousel-arrow prev" onclick="carouselStep('combo-colmena',-1)" aria-label="Foto anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button>
+        <button type="button" class="carousel-arrow next" onclick="carouselStep('combo-colmena',1)" aria-label="Foto siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></button>
+        <div class="carousel-dots" id="dots-combo-colmena"><button type="button" class="carousel-dot active" onclick="setComboSlide('combo-colmena',0)" aria-label="Foto 1"></button><button type="button" class="carousel-dot" onclick="setComboSlide('combo-colmena',1)" aria-label="Foto 2"></button></div></div>
+        <h3>Combo Colmena Premium</h3>
+        <div class="meta" id="sizelabel-combo-colmena">2 Plazas</div>
+        <div class="all-sizes-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="18" height="12" rx="1.5"/><path d="M3 11h18"/></svg>Disponible en todas las medidas</div>
+        <div class="price"><span class="price-value counter" id="priceval-combo-colmena" data-count="939" data-format="money">S/ 939</span> <span class="strike">S/ 1,199</span><span>Incluye instalación</span></div>
+        <div class="combo-includes">Cabecera Colmena + Box Tarima Clásico + Colchón Premium</div>
+        
+        <div class="qty-stepper" role="group" aria-label="Cantidad">
+          <button type="button" class="qty-btn" onclick="changeQty('combo-colmena',-1)" aria-label="Restar">−</button>
+          <span class="qty-value" id="qty-combo-colmena">1</span>
+          <button type="button" class="qty-btn" onclick="changeQty('combo-colmena',1)" aria-label="Sumar">+</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn primary" onclick="addToCart('combo-colmena')"><span>Añadir al carrito</span></button>
+          <a class="btn wa" href="https://wa.me/51910591720?text=%C2%A1Hola%21%20Estoy%20interesado/a%20en%20el%20Combo%20Colmena%20Premium%20%28Cabecera%20Colmena%20%2B%20Box%20Tarima%20Cl%C3%A1sico%20%2B%20Colch%C3%B3n%20Premium%29%20en%20tama%C3%B1o%202%20Plazas%20por%20S/%20939.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" rel="noopener" id="wa-link-combo-colmena">
+            <span class="wa-btn-inner">
+            <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.01 3C9.38 3 4 8.38 4 15.01c0 2.4.63 4.65 1.72 6.6L4 29l7.6-1.65a11.9 11.9 0 0 0 4.41.84h.01c6.63 0 12.01-5.38 12.01-12.01C28.02 8.38 22.64 3 16.01 3z"/></svg>
+            Consultar por WhatsApp
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="card reveal" data-category="combo">
+        <span class="card-badge combo-badge">Ahorra S/ 200</span>
+        <div class="card-art"><img id="img-combo-nube" src="images/combo-nube.jpg" alt="Combo Nube, 2 Plazas">
+        
+        <button type="button" class="carousel-arrow prev" onclick="carouselStep('combo-nube',-1)" aria-label="Foto anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button>
+        <button type="button" class="carousel-arrow next" onclick="carouselStep('combo-nube',1)" aria-label="Foto siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></button>
+        <div class="carousel-dots" id="dots-combo-nube"><button type="button" class="carousel-dot active" onclick="setComboSlide('combo-nube',0)" aria-label="Foto 1"></button><button type="button" class="carousel-dot" onclick="setComboSlide('combo-nube',1)" aria-label="Foto 2"></button></div></div>
+        <h3>Combo Nube</h3>
+        <div class="meta" id="sizelabel-combo-nube">2 Plazas</div>
+        <div class="all-sizes-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="18" height="12" rx="1.5"/><path d="M3 11h18"/></svg>Disponible en todas las medidas</div>
+        <div class="price"><span class="price-value counter" id="priceval-combo-nube" data-count="1299" data-format="money">S/ 1,299</span> <span class="strike">S/ 1,499</span><span>Incluye instalación</span></div>
+        <div class="combo-includes">Cabecera Nube + Colchón Passion</div>
+        
+        <div class="qty-stepper" role="group" aria-label="Cantidad">
+          <button type="button" class="qty-btn" onclick="changeQty('combo-nube',-1)" aria-label="Restar">−</button>
+          <span class="qty-value" id="qty-combo-nube">1</span>
+          <button type="button" class="qty-btn" onclick="changeQty('combo-nube',1)" aria-label="Sumar">+</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn primary" onclick="addToCart('combo-nube')"><span>Añadir al carrito</span></button>
+          <a class="btn wa" href="https://wa.me/51910591720?text=%C2%A1Hola%21%20Estoy%20interesado/a%20en%20el%20Combo%20Nube%20%28Cabecera%20Nube%20%2B%20Colch%C3%B3n%20Passion%29%20en%20tama%C3%B1o%202%20Plazas%20por%20S/%201%2C299.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" rel="noopener" id="wa-link-combo-nube">
+            <span class="wa-btn-inner">
+            <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.01 3C9.38 3 4 8.38 4 15.01c0 2.4.63 4.65 1.72 6.6L4 29l7.6-1.65a11.9 11.9 0 0 0 4.41.84h.01c6.63 0 12.01-5.38 12.01-12.01C28.02 8.38 22.64 3 16.01 3z"/></svg>
+            Consultar por WhatsApp
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="card reveal" data-category="combo">
+        <span class="card-badge combo-badge">Ahorra S/ 250</span>
+        <div class="card-art"><img id="img-combo-clasico" src="images/combo-clasico.jpg" alt="Combo Clásico, 2 Plazas">
+        
+        <button type="button" class="carousel-arrow prev" onclick="carouselStep('combo-clasico',-1)" aria-label="Foto anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button>
+        <button type="button" class="carousel-arrow next" onclick="carouselStep('combo-clasico',1)" aria-label="Foto siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></button>
+        <div class="carousel-dots" id="dots-combo-clasico"><button type="button" class="carousel-dot active" onclick="setComboSlide('combo-clasico',0)" aria-label="Foto 1"></button><button type="button" class="carousel-dot" onclick="setComboSlide('combo-clasico',1)" aria-label="Foto 2"></button></div></div>
+        <h3>Combo Clásico</h3>
+        <div class="meta" id="sizelabel-combo-clasico">2 Plazas</div>
+        <div class="all-sizes-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="18" height="12" rx="1.5"/><path d="M3 11h18"/></svg>Disponible en todas las medidas</div>
+        <div class="price"><span class="price-value counter" id="priceval-combo-clasico" data-count="949" data-format="money">S/ 949</span> <span class="strike">S/ 1,199</span><span>Incluye instalación</span></div>
+        <div class="combo-includes">Cabecera Clásica + Colchón Paraíso</div>
+        
+        <div class="qty-stepper" role="group" aria-label="Cantidad">
+          <button type="button" class="qty-btn" onclick="changeQty('combo-clasico',-1)" aria-label="Restar">−</button>
+          <span class="qty-value" id="qty-combo-clasico">1</span>
+          <button type="button" class="qty-btn" onclick="changeQty('combo-clasico',1)" aria-label="Sumar">+</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn primary" onclick="addToCart('combo-clasico')"><span>Añadir al carrito</span></button>
+          <a class="btn wa" href="https://wa.me/51910591720?text=%C2%A1Hola%21%20Estoy%20interesado/a%20en%20el%20Combo%20Cl%C3%A1sico%20%28Cabecera%20Cl%C3%A1sica%20%2B%20Colch%C3%B3n%20Para%C3%ADso%29%20en%20tama%C3%B1o%202%20Plazas%20por%20S/%20949.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" rel="noopener" id="wa-link-combo-clasico">
+            <span class="wa-btn-inner">
+            <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.01 3C9.38 3 4 8.38 4 15.01c0 2.4.63 4.65 1.72 6.6L4 29l7.6-1.65a11.9 11.9 0 0 0 4.41.84h.01c6.63 0 12.01-5.38 12.01-12.01C28.02 8.38 22.64 3 16.01 3z"/></svg>
+            Consultar por WhatsApp
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BENEFICIOS ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>Lo que incluye cada pedido</h2>
+    </div>
+    <div class="benefits">
+      <div class="benefit reveal">
+        <svg class="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 3h13v13H1z"/><path d="M14 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="1.8"/><circle cx="17.5" cy="18.5" r="1.8"/></svg>
+        <h3>Envío a domicilio</h3>
+        <p>Coordinamos la entrega e instalación en tu cuarto, sin dejarte el trabajo pendiente.</p>
+      </div>
+      <div class="benefit reveal">
+        <svg class="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2 3 7v6c0 5 4 8 9 9 5-1 9-4 9-9V7l-9-5z"/></svg>
+        <h3>Materiales de alta calidad</h3>
+        <p>Estructura reforzada y telas seleccionadas para resistir el uso diario.</p>
+      </div>
+      <div class="benefit reveal">
+        <svg class="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M14.7 2 22 9.3l-4.5 4.5-7.3-7.3z"/><path d="M12.5 4.2 4 12.7 2 22l9.3-2L19.8 11.5"/></svg>
+        <h3>Fabricación personalizada</h3>
+        <p>Medida, tela y forma a pedido, cuando el tamaño estándar no te cierra.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESO ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>Cómo hacemos cada cabecera</h2>
+      <p>De la elección de tela a tu cuarto, sin intermediarios.</p>
+    </div>
+    <div class="process-grid">
+      <div class="process-step reveal">
+        <div class="num">01</div>
+        <h3>Elección de tela</h3>
+        <p>Eliges el color y la textura que va con tu cuarto, entre nuestras variantes.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="num">02</div>
+        <h3>Corte y armado</h3>
+        <p>Armamos la estructura reforzada a la medida exacta que necesitas.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="num">03</div>
+        <h3>Tapizado a mano</h3>
+        <p>Cada botón y costura se hace pieza por pieza en el taller, no en serie.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="num">04</div>
+        <h3>Entrega e instalación</h3>
+        <p>Coordinamos el envío y la dejamos lista, instalada, en tu cuarto.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NOSOTROS ============ -->
+<section class="section" id="nosotros">
+  <div class="wrap nosotros">
+    <div class="nosotros-art">
+      <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="150" cy="150" r="90" stroke="#333333" stroke-width="1"/>
+        <path d="M90 150c0-40 26-66 60-66s60 26 60 66" stroke="#f5f4f1" stroke-width="1.4"/>
+        <circle cx="120" cy="140" r="4" fill="#9a9a9a"/>
+        <circle cx="150" cy="132" r="4" fill="#9a9a9a"/>
+        <circle cx="180" cy="140" r="4" fill="#9a9a9a"/>
+      </svg>
+    </div>
+    <div class="nosotros-copy">
+      <h2 style="margin-bottom:20px;">Nosotros</h2>
+      <p>Cada cabecera sale del mismo taller, pieza por pieza. Elegimos las telas por su tacto, no solo por el color, y armamos cada estructura para que dure más que la cama que hoy tienes en mente. Si tu cuarto necesita una medida distinta a las que ves aquí, la hacemos igual — para eso trabajamos a pedido.</p>
+      <div class="nosotros-stats">
+        <div class="stat"><b class="counter" data-count="100" data-suffix="%">0%</b><span>Hecho a pedido</span></div>
+        <div class="stat"><b class="counter" data-count="500" data-prefix="+">0</b><span>Cabeceras entregadas</span></div>
+        <div class="stat"><b class="counter" data-count="3">0</b><span>Tamaños de fábrica</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIOS ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>Lo que dicen quienes ya duermen ahí</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi reveal">
+        <p>"Pedí la Aurora en 2 Plazas y llegó exacta a la medida que mandé. Se nota la mano de obra."</p>
+        <div class="who">Renata V. — Surco</div>
+      </div>
+      <div class="testi reveal">
+        <p>"Cambió el cuarto entero. La tela que elegí no se parece en nada a lo que venden en las tiendas grandes."</p>
+        <div class="who">Diego M. — La Molina</div>
+      </div>
+      <div class="testi reveal">
+        <p>"Coordinaron la entrega un sábado y la instalaron ellos mismos. Cero drama."</p>
+        <div class="who">Fiorella A. — San Isidro</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALERÍA ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>Nuestro trabajo</h2>
+      <p>Algunas entregas recientes en dormitorios de nuestros clientes.</p>
+    </div>
+    <div class="gallery-strip reveal">
+    <img src="images/hexa.jpg" alt="Cabecera Hexa instalada en dormitorio">
+    <img src="images/aurora.jpg" alt="Cabecera Aurora instalada en dormitorio">
+    <img src="images/colmena.jpg" alt="Cabecera Colmena instalada en dormitorio">
+    <img src="images/vertice-imperial.jpg" alt="Cabecera Vértice Imperial instalada en dormitorio">
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>Preguntas frecuentes</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">¿Cuánto demora la fabricación?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Entregamos en un máximo de 3 días desde que confirmas tu pedido.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">¿Hacen envíos fuera de Lima?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Sí, coordinamos envío a todo el país. El costo varía según el destino.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">¿Puedo pedir una medida distinta a las del catálogo?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Sí, todos los modelos se pueden ajustar a la medida exacta de tu cama.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">¿Qué garantía tienen?<span class="plus">+</span></button>
+        <div class="faq-a"><p>2 años en estructura y tapizado por defectos de fabricación.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">¿Cómo hago el pedido?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Eliges el modelo, la cantidad y el color, y confirmas todo por WhatsApp.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer id="contacto">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div>
+        <div class="logo logo-footer"><img src="images/logo.png" alt="J&amp;H Hogar" class="logo-img logo-img-footer">J&amp;H Hogar</div>
+        <p>Cabeceras de autor, hechas a pedido en Lima.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Tienda</h4>
+          <a href="#catalogo">Catálogo</a>
+          <a href="#nosotros">Nosotros</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <a href="#" id="footerWa" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="mailto:hola@jhhogar.pe">hola@jhhogar.pe</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 J&amp;H Hogar. Todos los derechos reservados.</span>
+      <span>Lima, Perú</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ WHATSAPP FLOTANTE ============ -->
+<a class="wa-float" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.01 3C9.38 3 4 8.38 4 15.01c0 2.4.63 4.65 1.72 6.6L4 29l7.6-1.65a11.9 11.9 0 0 0 4.41.84h.01c6.63 0 12.01-5.38 12.01-12.01C28.02 8.38 22.64 3 16.01 3zm0 21.8h-.01a9.8 9.8 0 0 1-4.98-1.36l-.36-.21-3.7.8.8-3.63-.24-.37a9.76 9.76 0 0 1-1.5-5.2c0-5.4 4.4-9.79 9.8-9.79 2.62 0 5.08 1.02 6.93 2.87a9.72 9.72 0 0 1 2.87 6.93c0 5.4-4.4 9.79-9.8 9.79zm5.36-7.34c-.29-.15-1.74-.86-2.01-.96-.27-.1-.47-.15-.66.15-.2.29-.76.96-.93 1.16-.17.2-.34.22-.63.07-.29-.15-1.23-.45-2.34-1.44-.86-.77-1.45-1.72-1.62-2.01-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.51-.07-.15-.66-1.58-.9-2.16-.24-.57-.48-.5-.66-.5h-.56c-.2 0-.51.07-.78.37-.27.29-1.02 1-1.02 2.44s1.05 2.83 1.19 3.03c.15.2 2.06 3.14 5 4.4.7.3 1.24.48 1.67.61.7.22 1.34.19 1.84.12.56-.08 1.74-.71 1.98-1.4.24-.68.24-1.27.17-1.4-.07-.12-.27-.19-.56-.34z"/></svg>
+</a>
+
+<!-- ============ CARRITO ============ -->
+<div class="overlay" id="overlay" onclick="closeCart()"></div>
+<aside class="cart-panel" id="cartPanel">
+  <div class="cart-head">
+    <h3>Tu carrito</h3>
+    <button class="cart-close" onclick="closeCart()" aria-label="Cerrar carrito">&times;</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <p class="cart-empty">Aún no agregaste ninguna cabecera.</p>
+  </div>
+  <div class="cart-foot">
+    <div class="cart-total"><span>Total</span><b id="cartTotal">S/ 0</b></div>
+    <a class="btn wa" id="checkoutWa" style="width:100%;" href="#" target="_blank" rel="noopener">
+      <span class="wa-btn-inner">
+      <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.01 3C9.38 3 4 8.38 4 15.01c0 2.4.63 4.65 1.72 6.6L4 29l7.6-1.65a11.9 11.9 0 0 0 4.41.84h.01c6.63 0 12.01-5.38 12.01-12.01C28.02 8.38 22.64 3 16.01 3z"/></svg>
+      Finalizar por WhatsApp
+      </span>
+    </a>
+  </div>
+</aside>
+
+<script>
+  // ======= CONFIGURACIÓN =======
+  // Reemplaza este número por el de tu negocio, formato: código de país + número, sin '+' ni espacios.
+  const WHATSAPP_NUMBER = "51910591720";
+
+  // ======= PRODUCTOS =======
+  const products = [
+    {
+      id: "hexa",
+      name: "Hexa",
+      size: "2 Plazas",
+      price: 279,
+      category: "cabecera",
+      sizes: ["Plaza y media", "2 Plazas", "Queen", "King"],
+      originalPrice: 349,
+      colors: [{name:"Negro y Crema", hex:"transparent"}, {name:"Beige Cálido", hex:"#c9a875"}, {name:"Gris Grafito", hex:"#6b6f73"}],
+      badge: "M\u00e1s vendido",
+      overlayBox: {top:36, left:30, width:39, height:27},
+      img: "images/hexa.jpg"
+    },
+    {
+      id: "aurora",
+      name: "Aurora",
+      size: "2 Plazas",
+      price: 279,
+      category: "cabecera",
+      sizes: ["Plaza y media", "2 Plazas", "Queen", "King"],
+      originalPrice: 349,
+      colors: [{name:"Azul Grafito", hex:"transparent"}, {name:"Verde Salvia", hex:"#7c8a6a"}, {name:"Plata", hex:"#b8bcc0"}],
+      badge: null,
+      overlayBox: {top:22, left:30, width:41, height:45},
+      img: "images/aurora.jpg"
+    },
+    {
+      id: "colmena",
+      name: "Colmena",
+      size: "2 Plazas",
+      price: 279,
+      category: "cabecera",
+      sizes: ["Plaza y media", "2 Plazas", "Queen", "King"],
+      originalPrice: 349,
+      colors: [{name:"Vino", hex:"transparent"}, {name:"Negro", hex:"#1c1c1c"}, {name:"Terracota", hex:"#b5613f"}],
+      badge: "Nuevo",
+      overlayBox: {top:38, left:34, width:32, height:50},
+      img: "images/colmena.jpg"
+    },
+    {
+      id: "vertice-imperial",
+      name: "Vértice Imperial",
+      size: "2 Plazas",
+      price: 279,
+      category: "cabecera",
+      sizes: ["Plaza y media", "2 Plazas", "Queen", "King"],
+      originalPrice: 349,
+      colors: [{name:"Chocolate", hex:"transparent"}, {name:"Camel", hex:"#b98a52"}, {name:"Negro", hex:"#1c1c1c"}],
+      badge: null,
+      overlayBox: {top:7, left:28, width:44, height:47},
+      img: "images/vertice-imperial.jpg"
+    },
+    {
+      id: "box-nube",
+      name: "Box Tarima Nube",
+      size: "2 Plazas",
+      price: 590,
+      category: "base",
+      sizes: ["Plaza y media", "2 Plazas", "Queen", "King"],
+      img: "images/box-nube.jpg"
+    },
+    {
+      id: "box-cajones",
+      name: "Box Tarima con Cajones",
+      size: "2 Plazas",
+      price: 690,
+      category: "base",
+      sizes: ["Plaza y media", "2 Plazas", "Queen", "King"],
+      img: "images/box-cajones.jpg"
+    },
+    {
+      id: "box-elevable",
+      name: "Box Tarima Elevable",
+      size: "2 Plazas",
+      price: 750,
+      category: "base",
+      sizes: ["Plaza y media", "2 Plazas", "Queen", "King"],
+      img: "images/box-elevable.jpg"
+    },
+    {
+      id: "box-estampado",
+      name: "Box Tarima Estampado",
+      size: "2 Plazas",
+      price: 450,
+      category: "base",
+      sizes: ["Plaza y media", "2 Plazas", "Queen", "King"],
+      img: "images/box-estampado.jpg"
+    },
+    {
+      id: "combo-hexa",
+      name: "Combo Hexa Completo",
+      size: "2 Plazas",
+      price: 939,
+      category: "combo",
+      sizes: ["Plaza y media", "2 Plazas", "Queen", "King"],
+      originalPrice: 1199,
+      includes: "Cabecera Hexa + Box Tarima Elevable + Colchón Confort",
+      extraSlides: ["custom:colchon-paraiso"],
+      img: "images/hexa.jpg"
+    },
+    {
+      id: "combo-aurora",
+      name: "Combo Aurora Esencial",
+      size: "2 Plazas",
+      price: 939,
+      category: "combo",
+      sizes: ["Plaza y media", "2 Plazas", "Queen", "King"],
+      originalPrice: 1199,
+      includes: "Cabecera Aurora + Box Tarima Clásico + Colchón Esencial",
+      extraSlides: ["custom:colchon-paraiso"],
+      img: "images/aurora.jpg"
+    },
+    {
+      id: "combo-colmena",
+      name: "Combo Colmena Premium",
+      size: "2 Plazas",
+      price: 939,
+      category: "combo",
+      sizes: ["Plaza y media", "2 Plazas", "Queen", "King"],
+      originalPrice: 1199,
+      includes: "Cabecera Colmena + Box Tarima Clásico + Colchón Premium",
+      extraSlides: ["custom:colchon-paraiso"],
+      img: "images/colmena.jpg"
+    },
+    {
+      id: "combo-nube",
+      name: "Combo Nube",
+      size: "2 Plazas",
+      price: 1299,
+      category: "combo",
+      sizes: ["Plaza y media", "2 Plazas", "Queen", "King"],
+      originalPrice: 1499,
+      includes: "Cabecera Nube + Colchón Passion",
+      extraSlides: ["custom:nube-box"],
+      img: "images/combo-nube.jpg"
+    },
+    {
+      id: "combo-clasico",
+      name: "Combo Clásico",
+      size: "2 Plazas",
+      price: 949,
+      category: "combo",
+      sizes: ["Plaza y media", "2 Plazas", "Queen", "King"],
+      originalPrice: 1199,
+      includes: "Cabecera Clásica + Colchón Paraíso",
+      extraSlides: ["custom:colchon-paraiso"],
+      img: "images/combo-clasico.jpg"
+    }
+  ];
+
+  const cart = [];
+
+  function formatPrice(n){
+    return "S/ " + n.toLocaleString("es-PE");
+  }
+
+  const qtyState = {};
+  const colorState = {};
+  const sizeState = {};
+  const comboSlideState = {};
+  const BOX_GALLERY_IMG = "images/box-generico.svg";
+  const COLCHON_GALLERY_IMG = "images/colchon-generico.svg";
+  const CUSTOM_SLIDES = {"nube-box": {src: "images/box-nube.jpg", alt: "Box Tarima incluido en el Combo Nube"}, "colchon-paraiso": {src: "images/colchon-paraiso.jpg", alt: "Colchón Paraíso incluido"}};
+  const ARROW_LEFT = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>';
+  const ARROW_RIGHT = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>';
+  const SIZE_SHORT = {"Plaza y media":"1.5 Plaza", "2 Plazas":"2 Plazas", "Queen":"Queen", "King":"King"};
+  products.forEach(p => {
+    qtyState[p.id] = 1;
+    colorState[p.id] = 0;
+    if (p.category === "combo") comboSlideState[p.id] = 0;
+    if (Array.isArray(p.sizes)){
+      const idx = p.sizes.indexOf(p.size);
+      sizeState[p.id] = idx >= 0 ? idx : 0;
+    }
+  });
+
+  function currentSize(p){
+    if (Array.isArray(p.sizes)) return p.sizes[sizeState[p.id] || 0];
+    return p.size;
+  }
+
+  function currentPrice(p){
+    const size = currentSize(p);
+    if (p.sizePrices && p.sizePrices[size] !== undefined) return p.sizePrices[size];
+    return p.price;
+  }
+
+  function currentPrice(p){
+    const size = currentSize(p);
+    if (p.sizePrices && p.sizePrices[size] !== undefined) return p.sizePrices[size];
+    return p.price;
+  }
+
+  function renderProducts(){
+    const grid = document.getElementById("productGrid");
+    grid.innerHTML = products.map(p => {
+      const isCombo = p.category === "combo";
+      const hasColors = Array.isArray(p.colors) && p.colors.length > 0;
+      const hasSizes = Array.isArray(p.sizes);
+      const defaultColor = hasColors ? p.colors[0].name : null;
+      const defaultSizeIdx = hasSizes ? (p.sizes.indexOf(p.size) >= 0 ? p.sizes.indexOf(p.size) : 0) : 0;
+
+      const badgeHtml = isCombo
+        ? `<span class="card-badge combo-badge">Ahorra ${formatPrice(p.originalPrice - p.price)}</span>`
+        : (p.badge ? `<span class="card-badge">${p.badge}</span>` : "");
+
+      const initialPrice = (p.sizePrices && p.sizePrices[p.size] !== undefined) ? p.sizePrices[p.size] : p.price;
+      const priceValueSpan = `<span class="price-value counter" id="priceval-${p.id}" data-count="${initialPrice}" data-format="money">${formatPrice(initialPrice)}</span>`;
+      const caption = isCombo ? "Incluye instalación" : "Precio final, sin cuotas";
+      const strikeHtml = p.originalPrice ? ` <span class="strike">${formatPrice(p.originalPrice)}</span>` : "";
+      const priceHtml = `${priceValueSpan}${strikeHtml}<span>${caption}</span>`;
+
+      const includesHtml = isCombo ? `<div class="combo-includes">${p.includes}</div>` : "";
+
+      const swatchesHtml = hasColors ? `
+        <div class="swatches" role="group" aria-label="Color de tela">
+          ${p.colors.map((c,i) => `<button type="button" class="swatch${i===0?" active":""}" style="--swatch-color:${c.hex==="transparent"?"#8a8a8a":c.hex}" onclick="selectColor('${p.id}',${i})" aria-label="${c.name}" title="${c.name}"></button>`).join("")}
+        </div>
+        <div class="color-label" id="color-${p.id}">${defaultColor}</div>` : "";
+
+      const overlayHtml = hasColors ? `<div class="color-overlay" id="overlay-${p.id}" style="top:${p.overlayBox.top}%;left:${p.overlayBox.left}%;width:${p.overlayBox.width}%;height:${p.overlayBox.height}%;background:transparent;opacity:0;"></div>` : "";
+
+      const sizeSelHtml = hasSizes ? `<div class="all-sizes-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="18" height="12" rx="1.5"/><path d="M3 11h18"/></svg>Disponible en todas las medidas</div>` : "";
+
+      let arrowsHtml = "", dotsHtml = "";
+      if (isCombo){
+        const nSlides = 1 + (p.extraSlides ? p.extraSlides.length : 0);
+        const dotIdxs = Array.from({length: nSlides}, (_, i) => i);
+        const dots = dotIdxs.map(i => `<button type="button" class="carousel-dot${i===0?" active":""}" onclick="setComboSlide('${p.id}',${i})" aria-label="Foto ${i+1}"></button>`).join("");
+        if (nSlides > 1){
+          arrowsHtml = `<button type="button" class="carousel-arrow prev" onclick="carouselStep('${p.id}',-1)" aria-label="Foto anterior">${ARROW_LEFT}</button>
+        <button type="button" class="carousel-arrow next" onclick="carouselStep('${p.id}',1)" aria-label="Foto siguiente">${ARROW_RIGHT}</button>`;
+          dotsHtml = `<div class="carousel-dots" id="dots-${p.id}">${dots}</div>`;
+        }
+      }
+
+      return `
+      <div class="card reveal" data-category="${p.category}">
+        ${badgeHtml}
+        <div class="card-art"><img id="img-${p.id}" src="${p.img}" alt="${p.name}, ${p.size}">
+        ${overlayHtml}
+        ${arrowsHtml}
+        ${dotsHtml}</div>
+        <h3>${p.name}</h3>
+        <div class="meta" id="sizelabel-${p.id}">${p.size}</div>
+        ${sizeSelHtml}
+        <div class="price">${priceHtml}</div>
+        ${includesHtml}
+        ${swatchesHtml}
+        <div class="qty-stepper" role="group" aria-label="Cantidad">
+          <button type="button" class="qty-btn" onclick="changeQty('${p.id}',-1)" aria-label="Restar">−</button>
+          <span class="qty-value" id="qty-${p.id}">1</span>
+          <button type="button" class="qty-btn" onclick="changeQty('${p.id}',1)" aria-label="Sumar">+</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn primary" onclick="addToCart('${p.id}')"><span>Añadir al carrito</span></button>
+          <a class="btn wa" href="${productWaLink(p, 1, defaultColor)}" target="_blank" rel="noopener" id="wa-link-${p.id}">
+            <span class="wa-btn-inner">
+            <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.01 3C9.38 3 4 8.38 4 15.01c0 2.4.63 4.65 1.72 6.6L4 29l7.6-1.65a11.9 11.9 0 0 0 4.41.84h.01c6.63 0 12.01-5.38 12.01-12.01C28.02 8.38 22.64 3 16.01 3z"/></svg>
+            Consultar por WhatsApp
+            </span>
+          </a>
+        </div>
+      </div>`;
+    }).join("");
+  }
+
+  function currentColorName(p){
+    if (!Array.isArray(p.colors) || p.colors.length === 0) return null;
+    return p.colors[colorState[p.id] || 0].name;
+  }
+
+  // ======= SELECCIÓN DE COLOR (cabeceras): tiñe solo la zona de la cabecera =======
+  function selectColor(id, idx){
+    colorState[id] = idx;
+    const p = products.find(p => p.id === id);
+    const color = p.colors[idx];
+    const waEl = document.getElementById(`wa-link-${id}`);
+    if (waEl) waEl.href = productWaLink(p, qtyState[id] || 1, color.name);
+    const label = document.getElementById(`color-${id}`);
+    if (label) label.textContent = color.name;
+    const overlay = document.getElementById(`overlay-${id}`);
+    if (overlay){
+      if (color.hex === "transparent"){
+        overlay.style.opacity = 0;
+      } else {
+        overlay.style.background = color.hex;
+        overlay.style.opacity = 0.85;
+      }
+      const card = overlay.closest(".card");
+      card.querySelectorAll(".swatch").forEach((sw, i) => sw.classList.toggle("active", i === idx));
+    }
+  }
+
+  // ======= SELECCIÓN DE MEDIDA (cabeceras, box tarima, colchones) =======
+  function selectSize(id, idx){
+    sizeState[id] = idx;
+    const p = products.find(p => p.id === id);
+    const size = p.sizes[idx];
+    const label = document.getElementById(`sizelabel-${id}`);
+    if (label) label.textContent = size;
+    const priceEl = document.getElementById(`priceval-${id}`);
+    if (priceEl) priceEl.textContent = formatPrice(currentPrice(p));
+    const waEl = document.getElementById(`wa-link-${id}`);
+    if (waEl) waEl.href = productWaLink(p, qtyState[id] || 1, currentColorName(p));
+    const btnGroup = document.getElementById(`sizes-${id}`);
+    if (btnGroup) btnGroup.querySelectorAll(".size-btn").forEach((b, i) => b.classList.toggle("active", i === idx));
+  }
+
+  // ======= GALERÍA DE FOTOS (combos): cabecera -> box tarima -> colchón =======
+  function setComboSlide(id, idx){
+    comboSlideState[id] = idx;
+    const p = products.find(p => p.id === id);
+    const img = document.getElementById(`img-${id}`);
+    if (!img) return;
+    if (idx === 0){
+      img.src = p.img;
+      img.alt = `${p.name}, ${p.size}`;
+    } else {
+      const kind = p.extraSlides[idx - 1];
+      if (kind === "box"){
+        img.src = BOX_GALLERY_IMG;
+        img.alt = "Box Tarima incluido (referencial)";
+      } else if (kind === "colchon"){
+        img.src = COLCHON_GALLERY_IMG;
+        img.alt = "Colchón incluido (referencial)";
+      } else if (kind && kind.startsWith("custom:")){
+        const custom = CUSTOM_SLIDES[kind.slice(7)];
+        if (custom){ img.src = custom.src; img.alt = custom.alt; }
+      }
+    }
+    const card = img.closest(".card");
+    card.querySelectorAll(".carousel-dot").forEach((d, i) => d.classList.toggle("active", i === idx));
+  }
+
+  function carouselStep(id, delta){
+    const p = products.find(p => p.id === id);
+    if (!p || p.category !== "combo") return;
+    const total = 1 + (p.extraSlides ? p.extraSlides.length : 0);
+    if (total <= 1) return;
+    const next = (((comboSlideState[id] || 0) + delta) % total + total) % total;
+    setComboSlide(id, next);
+  }
+
+  function changeQty(id, delta){
+    const next = Math.min(10, Math.max(1, (qtyState[id] || 1) + delta));
+    qtyState[id] = next;
+    document.getElementById(`qty-${id}`).textContent = next;
+    const p = products.find(p => p.id === id);
+    document.getElementById(`wa-link-${id}`).href = productWaLink(p, next, currentColorName(p));
+  }
+
+  function addToCart(id){
+    const product = products.find(p => p.id === id);
+    const qty = qtyState[id] || 1;
+    const colorName = currentColorName(product);
+    const size = currentSize(product);
+    const price = currentPrice(product);
+    const cartId = colorName ? `${id}__${colorName}__${size}` : `${id}__${size}`;
+    const displayName = colorName ? `${product.name} — ${colorName}` : product.name;
+    const existing = cart.find(item => item.cartId === cartId);
+    if (existing) { existing.qty += qty; }
+    else { cart.push({ ...product, cartId, colorName, name: displayName, size, price, qty: qty }); }
+    renderCart();
+    openCart();
+  }
+
+  function positionTabIndicator(btn){
+    const indicator = document.getElementById("catIndicator");
+    if (!indicator || !btn) return;
+    indicator.style.width = btn.offsetWidth + "px";
+    indicator.style.height = btn.offsetHeight + "px";
+    indicator.style.top = btn.offsetTop + "px";
+    indicator.style.transform = `translateX(${btn.offsetLeft}px)`;
+  }
+
+  function filterCategory(cat, btn){
+    document.querySelectorAll("#catTabs .cat-tab").forEach(b => {
+      b.classList.toggle("active", b.dataset.cat === cat);
+    });
+    const activeBtn = btn || document.querySelector(`#catTabs .cat-tab[data-cat="${cat}"]`);
+    positionTabIndicator(activeBtn);
+    if (activeBtn) activeBtn.scrollIntoView({behavior:"smooth", inline:"center", block:"nearest"});
+
+    const cards = Array.from(document.querySelectorAll("#productGrid .card"));
+    const toHide = cards.filter(c => !(cat === "todo" || c.dataset.category === cat) && c.style.display !== "none");
+    const toShow = cards.filter(c => (cat === "todo" || c.dataset.category === cat));
+
+    toHide.forEach(card => card.classList.add("filtering-out"));
+
+    setTimeout(() => {
+      cards.forEach(card => {
+        const show = cat === "todo" || card.dataset.category === cat;
+        card.style.display = show ? "" : "none";
+        card.classList.remove("filtering-out");
+      });
+      toShow.forEach((card, i) => {
+        card.classList.remove("filtering-in");
+        void card.offsetWidth;
+        card.style.animationDelay = `${Math.min(i, 8) * 0.05}s`;
+        card.classList.add("filtering-in");
+      });
+    }, toHide.length ? 220 : 0);
+  }
+
+  function removeFromCart(cartId){
+    const idx = cart.findIndex(item => item.cartId === cartId);
+    if (idx > -1) cart.splice(idx, 1);
+    renderCart();
+  }
+
+  function renderCart(){
+    const container = document.getElementById("cartItems");
+    const countEl = document.getElementById("cartCount");
+    const totalEl = document.getElementById("cartTotal");
+
+    const totalQty = cart.reduce((sum, i) => sum + i.qty, 0);
+    countEl.textContent = totalQty;
+    countEl.classList.remove("bump");
+    void countEl.offsetWidth;
+    countEl.classList.add("bump");
+
+    if (cart.length === 0){
+      container.innerHTML = `<p class="cart-empty">Aún no agregaste ninguna cabecera.</p>`;
+      totalEl.textContent = formatPrice(0);
+      document.getElementById("checkoutWa").href = waLink("¡Hola! Quiero adquirir un producto de J&H Hogar (cabeceras, box tarima o combos) 🛏️");
+      return;
+    }
+
+    container.innerHTML = cart.map(item => `
+      <div class="cart-item">
+        <div>
+          <div class="ci-name">${item.name} ${item.qty > 1 ? "× " + item.qty : ""}</div>
+          <div class="ci-meta">${item.size}</div>
+          <button class="ci-remove" onclick="removeFromCart('${item.cartId}')">Quitar</button>
+        </div>
+        <div class="ci-price">${formatPrice(item.price * item.qty)}</div>
+      </div>
+    `).join("");
+
+    const total = cart.reduce((sum, i) => sum + i.price * i.qty, 0);
+    totalEl.textContent = formatPrice(total);
+
+    const lines = cart.map(i => `- ${i.name} (${i.size}) x${i.qty} — ${formatPrice(i.price * i.qty)}`);
+    const message = `¡Hola! Quisiera hacer este pedido:\n${lines.join("\n")}\n\nTotal: ${formatPrice(total)}\n¿Tienen disponibilidad?`;
+    document.getElementById("checkoutWa").href = waLink(message);
+  }
+
+  function openCart(){
+    document.getElementById("cartPanel").classList.add("open");
+    document.getElementById("overlay").classList.add("open");
+  }
+  function closeCart(){
+    document.getElementById("cartPanel").classList.remove("open");
+    document.getElementById("overlay").classList.remove("open");
+  }
+
+  // ======= WHATSAPP =======
+  function waLink(message){
+    return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+  }
+
+  function productWaLink(p, qty, colorName){
+    const q = qty || 1;
+    const cantidadTxt = q > 1 ? ` (Cantidad: ${q})` : "";
+    const colorTxt = colorName ? ` (${colorName})` : "";
+    let productLabel;
+    if (p.category === "combo") productLabel = `${p.name} (incluye: ${p.includes})`;
+    else if (p.category === "cabecera") productLabel = `cabecera ${p.name}`;
+    else productLabel = p.name;
+    const size = currentSize(p);
+    const price = currentPrice(p);
+    const message = `¡Hola! Estoy interesado/a en ${productLabel}${colorTxt} en tamaño ${size}${cantidadTxt} por el precio de ${formatPrice(price)}. ¿Tienen disponibilidad?`;
+    return waLink(message);
+  }
+
+  document.getElementById("waFloat").href = waLink("¡Hola! Quiero adquirir un producto de J&H Hogar (cabeceras, box tarima o combos) 🛏️");
+  document.getElementById("footerWa").href = waLink("¡Hola! Quiero adquirir un producto de J&H Hogar (cabeceras, box tarima o combos) 🛏️");
+
+  // ======= FAQ =======
+  function toggleFaq(btn){
+    const item = btn.closest(".faq-item");
+    const wasOpen = item.classList.contains("open");
+    document.querySelectorAll(".faq-item.open").forEach(el => el.classList.remove("open"));
+    if (!wasOpen) item.classList.add("open");
+  }
+
+  // ======= NAV MOBILE =======
+  function toggleNav(){
+    document.getElementById("mainNav").classList.toggle("open");
+  }
+
+  // ======= ANIMACIÓN AL HACER SCROLL =======
+  function initReveal(){
+    const items = document.querySelectorAll(".reveal");
+    if (!("IntersectionObserver" in window)){
+      items.forEach(el => el.classList.add("in-view"));
+      return;
+    }
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting){
+          entry.target.classList.add("in-view");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    items.forEach(el => observer.observe(el));
+  }
+
+  // ======= CONTADORES ANIMADOS =======
+  function animateCounter(el){
+    const target = parseInt(el.dataset.count, 10) || 0;
+    const prefix = el.dataset.prefix || "";
+    const suffix = el.dataset.suffix || "";
+    const isMoney = el.dataset.format === "money";
+    const duration = isMoney ? 900 : 1100;
+    const start = performance.now();
+    function tick(now){
+      const progress = Math.min(1, (now - start) / duration);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const value = Math.round(target * eased);
+      el.textContent = isMoney ? formatPrice(value) : (prefix + value + suffix);
+      if (progress < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  function initCounters(){
+    const counters = document.querySelectorAll(".counter");
+    if (counters.length === 0) return;
+    if (!("IntersectionObserver" in window)){
+      counters.forEach(el => animateCounter(el));
+      return;
+    }
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting){
+          animateCounter(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.4 });
+    counters.forEach(el => observer.observe(el));
+  }
+
+  renderProducts();
+  renderCart();
+  initReveal();
+  initCounters();
+
+  // posicionar el indicador de pestañas de categoría
+  requestAnimationFrame(() => {
+    positionTabIndicator(document.querySelector('#catTabs .cat-tab[data-cat="todo"]'));
+  });
+  window.addEventListener("resize", () => {
+    const active = document.querySelector("#catTabs .cat-tab.active");
+    if (active) positionTabIndicator(active);
+  });
+</script>
+
+</body>
+</html>
